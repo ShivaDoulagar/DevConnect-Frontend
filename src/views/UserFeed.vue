@@ -4,12 +4,10 @@
       <NavBar />
     </div>
     <div class="content flex-4 bg-gray-600 rounded">
-      <UserDashBoard />
+      <FeedLayout />
     </div>
   </div>
 </template>
-
 <script setup>
 import NavBar from '@/components/SideNavBar.vue'
-import UserDashBoard from '@/components/UserDashBoard.vue'
-</script>
+import FeedLayout from '@/layouts/FeedLayout.vue'</script>

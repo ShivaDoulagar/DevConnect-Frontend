@@ -6,6 +6,7 @@ import SignIn from '@/views/SignIn.vue'
 import LandingPage from '@/views/LandingPage.vue'
 import SignUp from '@/views/SignUp.vue' // Renamed from SiginUp.vue
 import DashBoard from '@/views/DashBoard.vue'
+import FeedLayout from '@/layouts/FeedLayout.vue'
 
 const routes = [
   {
@@ -32,7 +33,12 @@ const routes = [
     component: DashBoard,
     meta: { requiresAuth: true }, // Protected
   },
-  // Remove the duplicate redirect route
+  {
+    path: '/feed',
+    name: 'Feed',
+    component: FeedLayout,
+    meta: { requiresAuth: true }, // Protected
+  },
 ]
 
 const router = createRouter({

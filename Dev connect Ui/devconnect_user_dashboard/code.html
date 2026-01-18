@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevConnect User Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#1d4ed8",
+            "background-light": "#f3f4f6",
+            "background-dark": "#111827",
+            "card-light": "#ffffff",
+            "card-dark": "#1f2937",
+            "text-light": "#1f2937",
+            "text-dark": "#f9fafb",
+            "subtext-light": "#6b7280",
+            "subtext-dark": "#9ca3af",
+            "border-light": "#e5e7eb",
+            "border-dark": "#374151"
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    .material-icons-outlined {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-sans">
+<div class="flex h-screen">
+<aside class="w-64 bg-card-light dark:bg-card-dark flex flex-col border-r border-border-light dark:border-border-dark">
+<div class="p-6 flex items-center gap-3 border-b border-border-light dark:border-border-dark">
+<div class="bg-primary p-2 rounded-lg flex items-center justify-center">
+<span class="material-icons-outlined text-white">code</span>
+</div>
+<h1 class="text-xl font-bold text-text-light dark:text-text-dark">DevConnect</h1>
+</div>
+<nav class="flex-1 p-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold" href="#">
+<span class="material-icons-outlined">dashboard</span>
+          Dashboard
+        </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-subtext-light dark:text-subtext-dark hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-icons-outlined">feed</span>
+          Feed
+        </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-subtext-light dark:text-subtext-dark hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-icons-outlined">person</span>
+          My Profile
+        </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-subtext-light dark:text-subtext-dark hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-icons-outlined">add_circle_outline</span>
+          Create Post
+        </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-subtext-light dark:text-subtext-dark hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-icons-outlined">notifications</span>
+          Notifications
+        </a>
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-subtext-light dark:text-subtext-dark hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-icons-outlined">settings</span>
+          Settings
+        </a>
+</nav>
+<div class="p-6 border-t border-border-light dark:border-border-dark">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCGsXheDoaygNkVs3MCAIaRi46S6LFF0pBPA9l40xJ6vxqzEMhyPLKYtzn3Y-i4d977JXcicykgXTCBZsqfZYBYUXttsEdHj6HZ2WuRLhoPBZKJ1eHRekI8J6J_DAr7KK440zyY3NTzNngIfhro8tikWiFsEQeJf6nDObinh-mRqVhzoAEirEatXRvpKm-B6Z_uFuhJKUFh-mAKLGAZAUIrsclCtET-MKCCdsMtNImLA8UXIlfR0sM0ROsFzq3cJh4Zzf9_ILsUeAy"/>
+<div>
+<p class="font-semibold text-text-light dark:text-text-dark">Alex Doe</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">Logout</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-7xl mx-auto">
+<header class="mb-8">
+<h2 class="text-3xl font-bold text-text-light dark:text-text-dark">Welcome back, Alex!</h2>
+<p class="text-subtext-light dark:text-subtext-dark mt-1">Here's a summary of your activity on DevConnect.</p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm flex items-start gap-4">
+<div class="bg-primary/10 p-3 rounded-lg flex items-center justify-center">
+<span class="material-icons-outlined text-primary">article</span>
+</div>
+<div>
+<p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Total Posts</p>
+<p class="text-2xl font-bold text-text-light dark:text-text-dark">42</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm flex items-start gap-4">
+<div class="bg-red-500/10 p-3 rounded-lg flex items-center justify-center">
+<span class="material-icons-outlined text-red-500">favorite_border</span>
+</div>
+<div>
+<p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Likes Received</p>
+<p class="text-2xl font-bold text-text-light dark:text-text-dark">1,280</p>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm flex items-start gap-4">
+<div class="bg-green-500/10 p-3 rounded-lg flex items-center justify-center">
+<span class="material-icons-outlined text-green-500">comment</span>
+</div>
+<div>
+<p class="text-sm font-medium text-subtext-light dark:text-subtext-dark">Comments</p>
+<p class="text-2xl font-bold text-text-light dark:text-text-dark">312</p>
+</div>
+</div>
+</div>
+<div class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-sm">
+<h3 class="text-xl font-semibold mb-4 text-text-light dark:text-text-dark">Recent Activity</h3>
+<ul class="divide-y divide-border-light dark:divide-border-dark">
+<li class="py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-icons-outlined text-green-500">chat_bubble_outline</span>
+<div>
+<p class="text-text-light dark:text-text-dark">
+<span class="font-semibold">Jane Smith</span> commented on your post <span class="text-primary font-medium">"React Hooks Best Practices"</span>
+</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">2 hours ago</p>
+</div>
+</div>
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</li>
+<li class="py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-icons-outlined text-red-500">favorite_border</span>
+<div>
+<p class="text-text-light dark:text-text-dark">
+<span class="font-semibold">John Doe</span> liked your post <span class="text-primary font-medium">"Building a REST API with Node.js"</span>
+</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">5 hours ago</p>
+</div>
+</div>
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</li>
+<li class="py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-icons-outlined text-blue-500">person_add_alt</span>
+<div>
+<p class="text-text-light dark:text-text-dark">
+<span class="font-semibold">Emily White</span> started following you.
+                  </p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">1 day ago</p>
+</div>
+</div>
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</li>
+<li class="py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-icons-outlined text-green-500">chat_bubble_outline</span>
+<div>
+<p class="text-text-light dark:text-text-dark">
+<span class="font-semibold">Chris Green</span> commented on your post <span class="text-primary font-medium">"Building a REST API with Node.js"</span>
+</p>
+<p class="text-sm text-subtext-light dark:text-subtext-dark">2 days ago</p>
+</div>
+</div>
+<button class="text-subtext-light dark:text-subtext-dark hover:text-text-light dark:hover:text-text-dark">
+<span class="material-icons-outlined">chevron_right</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>

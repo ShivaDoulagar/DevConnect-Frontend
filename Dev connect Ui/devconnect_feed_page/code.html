@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevConnect Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3b82f6", // blue-500
+              "background-light": "#f1f5f9", // slate-100
+              "background-dark": "#0f172a", // slate-900
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem", // 8px
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-icons {
+            font-size: 20px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+<div id="root">
+<header class="bg-white dark:bg-slate-800/50 backdrop-blur-sm sticky top-0 z-40 border-b border-slate-200 dark:border-slate-700">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<span class="material-icons text-primary mr-2" style="font-size: 28px;">code</span>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white">DevConnect</h1>
+</div>
+<div class="hidden md:flex flex-1 mx-8 max-w-lg">
+<div class="relative w-full">
+<span class="material-icons absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-10 pr-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-700 border-transparent focus:ring-2 focus:ring-primary focus:border-transparent dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500" placeholder="Search for posts, tags, or developers..." type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<button class="bg-primary text-white px-4 py-2 rounded-lg font-semibold flex items-center space-x-2 hover:bg-blue-600 transition-colors">
+<span class="material-icons" style="font-size: 20px;">add</span>
+<span>Create Post</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400">
+<span class="material-icons">notifications</span>
+</button>
+<img alt="User avatar" class="h-10 w-10 rounded-full cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYw_T04MlEUNRXt56z8vNtxYhSKGA0lVNltMvyPa3-rXTr2Tg0kbPNDZiGR3BIIgUJpEq6l_BAnamTP-MqBqo1baPP2Bj85mncNTM2RlSuBh4hzWscw54FlbF6phrPPHKOT1-c2tty16Fa1PRy661QBPVz8SWsAWdkiYV2989zmJmbXuhkHqiMNr0HPOcPFxNfkRpFg0XXBARD__cEvuPj46N3WSbDFeXDMEE4I_5vGCnCznWKFmdHLD7lt7mFEUHgSeJIv8e4Ko7e"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<aside class="hidden lg:block lg:col-span-3">
+<div class="sticky top-24 space-y-6">
+<nav class="bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm">
+<ul class="space-y-2">
+<li><a class="flex items-center space-x-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-700 font-semibold" href="#"><span class="material-icons text-primary">home</span><span>Home</span></a></li>
+<li><a class="flex items-center space-x-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700" href="#"><span class="material-icons">explore</span><span>Explore</span></a></li>
+<li><a class="flex items-center space-x-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700" href="#"><span class="material-icons">bookmark</span><span>Bookmarks</span></a></li>
+<li><a class="flex items-center space-x-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700" href="#"><span class="material-icons">person</span><span>Profile</span></a></li>
+</ul>
+</nav>
+</div>
+</aside>
+<div class="col-span-12 lg:col-span-6">
+<div class="space-y-6">
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm overflow-hidden">
+<div class="p-5">
+<div class="flex items-center mb-4">
+<img alt="Avatar of Sarah Lee" class="w-12 h-12 rounded-full mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-20CJ7MPf4ySRnKEpaoO8nSVWHujNJuLLiuJ1fRUIurtHVXUoSvkEysvHTRRCCFcBFDOrSF_xfxaaIxi2otWiu-SZbs4ew3QLM9lZFBEiwh9guPAcHaes-HFgctwAUx_jUoFmdzN-j2qttDSK953TLfmF5BxcSdQbNOOfc-xva20qz5V6zxEVciJoJKZzlNdUMq_EZehI9PVQoC0iVEnqM532aqeZfNtBc7e6647Y5V016ufSz2D44dPMrLFeN5kqFlGo7uer60hP"/>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Sarah Lee</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">posted 2 hours ago</p>
+</div>
+</div>
+<h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Building a real-time chat app with WebSockets</h2>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Just finished a deep dive into WebSockets and built a simple real-time chat application. It's amazing how this technology enables bidirectional communication. Planning to write a full tutorial on this soon! #WebSockets #RealTime #Dev</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300">#javascript</span>
+<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">#nodejs</span>
+<span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-900 dark:text-purple-300">#websockets</span>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 px-5 py-3 flex justify-between items-center text-slate-500 dark:text-slate-400">
+<div class="flex space-x-5">
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">thumb_up</span> <span>128 Likes</span></button>
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">chat_bubble_outline</span> <span>32 Comments</span></button>
+</div>
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">share</span> <span>Share</span></button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm overflow-hidden">
+<div class="p-5">
+<div class="flex items-center mb-4">
+<img alt="Avatar of Mike Chen" class="w-12 h-12 rounded-full mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAArid0H8sMfXHquckytLITcqR1OhzLCFN3OKwx1yn-pnrcJODHe-4EtDv9H7ew9WkyRY_vuG27sXcuAtKmuImXlKN_oUbL4Qpts2TKPvS8jafG2q1kFDVz5RSHzeVZE-npff2FrU4IvUh-6GUA0l5nJIMouRcfHOzzq3qEOSo1IWZfoDXQDNbmNH9JqFQc2OsQjMvpHd3lEFLHyk7t6oaq_U0SBrvrPvlsyW33kq6lJMU2GYGeYWx-3hjJzaHXRtMkMdfO7vbCgdVw"/>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Mike Chen</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">posted 5 hours ago</p>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Excited to share my latest UI/UX project. I've been experimenting with neumorphic design and glassmorphism. What do you guys think?</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-pink-900 dark:text-pink-300">#uiux</span>
+<span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">#design</span>
+<span class="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-indigo-900 dark:text-indigo-300">#figma</span>
+</div>
+</div>
+<img alt="Abstract gradient design" class="w-full h-auto max-h-96 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB3Xrk4dCPItgWEEcA1JG_KzRF3tY7hUirb1C2b5q9xhDB05egerZYNEmoSAaIiRlaa9ScNmzdvEVq9q6ltXdezErWtedp5BOJOKP3MGkiRRGDOgEhumtoZciwRZ8dspC4e1lqllN6EAXX6h1RReIvIeXieKsCpm7sED7PWSgXnAXz7NGMOtCo_lQ4_FRdTF7UfPo1SOtAppCxg_GsHKjXCwv1wherAJv3hw9EQDOZYgUnGJGTRQggXGTIl1V8Zvio9SlX-D6s11lV"/>
+<div class="border-t border-slate-200 dark:border-slate-700 px-5 py-3 flex justify-between items-center text-slate-500 dark:text-slate-400">
+<div class="flex space-x-5">
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">thumb_up</span> <span>310 Likes</span></button>
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">chat_bubble_outline</span> <span>78 Comments</span></button>
+</div>
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">share</span> <span>Share</span></button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-lg shadow-sm overflow-hidden">
+<div class="p-5">
+<div class="flex items-center mb-4">
+<img alt="Avatar of Alex Johnson" class="w-12 h-12 rounded-full mr-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPmUXBPpg8bt5dlJsVeni6r-prDslGLiisq5yeof4BYIhkuCePC2dic2AudYYioU26TB8GGjP0HFhjqCtc81WKo7KIMf7gkLhUaXaAcbesDQKktvQELUV0-KHsXQR2vFUd6KYVTUfr6an7A2Nv2N2jq3_iM1hSZy3e4PUcy2kZOvyIsDw72YxN3kW2SkhWJ5WbYg_O4IIStWj4qRXeqSoz57aZ40G8owfXOjme2BGBYcezbwIDK6z-4_9-uYqUG_NTNOEa5Ls79nsh"/>
+<div>
+<p class="font-bold text-slate-900 dark:text-white">Alex Johnson</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">posted 1 day ago</p>
+</div>
+</div>
+<h2 class="text-xl font-bold mb-2 text-slate-900 dark:text-white">Question: Best practices for state management in large React apps?</h2>
+<p class="text-slate-600 dark:text-slate-300 mb-4">Our team's project is growing and prop-drilling is becoming a nightmare. We're considering Redux, Zustand, and Context API. What are your experiences and recommendations for scalability and maintainability?</p>
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-cyan-100 text-cyan-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-cyan-900 dark:text-cyan-300">#react</span>
+<span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">#redux</span>
+<span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">#architecture</span>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-700 px-5 py-3 flex justify-between items-center text-slate-500 dark:text-slate-400">
+<div class="flex space-x-5">
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">thumb_up</span> <span>95 Likes</span></button>
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">chat_bubble_outline</span> <span>112 Comments</span></button>
+</div>
+<button class="flex items-center space-x-1.5 hover:text-primary transition-colors"><span class="material-icons">share</span> <span>Share</span></button>
+</div>
+</div>
+<div class="flex justify-center pt-4">
+<button class="bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 px-6 py-2 rounded-lg font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+                                Load More Posts
+                            </button>
+</div>
+</div>
+</div>
+<aside class="hidden lg:block lg:col-span-3">
+<div class="sticky top-24 space-y-8">
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg shadow-sm">
+<h3 class="font-bold text-lg mb-4 text-slate-900 dark:text-white">Trending Tags</h3>
+<div class="space-y-3">
+<a class="block text-slate-600 dark:text-slate-400 hover:text-primary" href="#">#reactjs</a>
+<a class="block text-slate-600 dark:text-slate-400 hover:text-primary" href="#">#tailwindcss</a>
+<a class="block text-slate-600 dark:text-slate-400 hover:text-primary" href="#">#python</a>
+<a class="block text-slate-600 dark:text-slate-400 hover:text-primary" href="#">#devops</a>
+<a class="block text-slate-600 dark:text-slate-400 hover:text-primary" href="#">#ai</a>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 p-5 rounded-lg shadow-sm">
+<h3 class="font-bold text-lg mb-4 text-slate-900 dark:text-white">Suggested Developers</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<img alt="Avatar of Jane Doe" class="w-10 h-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDZzy3XN-V-3KwOBV_fgWzap3DbuqBETz2iL3xrOJB-MRQDXOkrnkX4_h3wNfKcfRMvZPF1RR3ET7g6g2vD0XXWrBxAfvQiRBNZBxGw40u7gkQH8JrX9XDAh8JgjZcWV0vBtKYWSZ3aGB_YgIMbWAlcEj-1uPnXROsCsJFdyGStgw_JU_TpLR0ySRnvOoe31vdCdAGggEF4X0e_zo0FGlYvOamEKnkFqZR0WTFFxYDxn6hK5roYy6YJzW4nWHHf-O2W7Mh5eUYxpBe"/>
+<div>
+<p class="font-semibold text-sm text-slate-900 dark:text-white">Jane Doe</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">React &amp; Node.js</p>
+</div>
+</div>
+<button class="text-primary font-semibold text-sm">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<img alt="Avatar of John Smith" class="w-10 h-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4Y80jMLOg4axMEtMxP57vF3bKUJER_vQIqigi-BrH070ZrRYWQg1QprWMD8xXnBkYeHE9J56evUNGUH_T_da6bHZg8WlVGKBC8FP8lPSRA7caouwUVUuYNpCUTaZbrjfDhF0yI86ehgrb7tMfcGwepD4m1wFQ4AgbXi3ar83QFAE5tUBy3VHa7v_EujO1PRb0c5MIu5PaUih30lVwd0FMpAOvfUPOTC_MOUDMoZ5nNFgXY3D6wqERI4EYgKqpktZAqUvCIm978Jv_"/>
+<div>
+<p class="font-semibold text-sm text-slate-900 dark:text-white">John Smith</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Python &amp; AI/ML</p>
+</div>
+</div>
+<button class="text-primary font-semibold text-sm">Follow</button>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<img alt="Avatar of Emily White" class="w-10 h-10 rounded-full mr-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEn515uMHl9Xi_oArXN5XX0PSkzI3Ok8pXgYOvjKevo5rtRngyYL-VQ0HlFuyMAHjtliohl-xIjGJ1oAp6pml4tr0_x6aFwqBMG64TORfHyaeHYFRe1i6LBKKiEHunAfrCfRFDHQ6OX-dTm1kBsOcD6bR0rnYKGqm8Nnzb0rMsRrQh4wtAubd8D1wQuNvlL7nxryv0Pa2SzFiNRs7oGxqsUAbzLCp7Y1OdSbewJo4VbpJ-M1ZPH3Kafsd6R-s2TzKUDpTj4PcPMJEg"/>
+<div>
+<p class="font-semibold text-sm text-slate-900 dark:text-white">Emily White</p>
+<p class="text-xs text-slate-500 dark:text-slate-400">Cloud &amp; DevOps</p>
+</div>
+</div>
+<button class="text-primary font-semibold text-sm">Follow</button>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+
+</body></html>

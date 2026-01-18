@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevConnect Profile Edit Page</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4F46E5",
+            "background-light": "#F9FAFB",
+            "background-dark": "#111827",
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+<div class="w-full max-w-2xl mx-auto">
+<header class="mb-8 text-center">
+<h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Edit Your Profile</h1>
+<p class="mt-2 text-base text-gray-600 dark:text-gray-400">Keep your DevConnect profile fresh and up-to-date.</p>
+</header>
+<main class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 sm:p-8 space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="name">Name</label>
+<input class="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm text-gray-900 dark:text-white" id="name" name="name" placeholder="e.g., Alex Doe" type="text" value="Alex Doe"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="bio">Bio</label>
+<textarea class="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm text-gray-900 dark:text-white" id="bio" name="bio" placeholder="Tell us a bit about yourself..." rows="4">Full-stack developer passionate about open-source and building scalable web applications. Coffee enthusiast.</textarea>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="skills">Skills</label>
+<div class="flex items-center gap-2 flex-wrap p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-50 dark:bg-gray-700">
+<span class="flex items-center gap-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-indigo-300 text-sm font-medium px-2 py-1 rounded">
+              JavaScript
+              <button class="text-primary/60 dark:text-indigo-300/70 hover:text-primary dark:hover:text-indigo-300">
+<span class="material-icons-outlined" style="font-size: 16px;">close</span>
+</button>
+</span>
+<span class="flex items-center gap-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-indigo-300 text-sm font-medium px-2 py-1 rounded">
+              React
+              <button class="text-primary/60 dark:text-indigo-300/70 hover:text-primary dark:hover:text-indigo-300">
+<span class="material-icons-outlined" style="font-size: 16px;">close</span>
+</button>
+</span>
+<span class="flex items-center gap-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-indigo-300 text-sm font-medium px-2 py-1 rounded">
+              Node.js
+              <button class="text-primary/60 dark:text-indigo-300/70 hover:text-primary dark:hover:text-indigo-300">
+<span class="material-icons-outlined" style="font-size: 16px;">close</span>
+</button>
+</span>
+<span class="flex items-center gap-1.5 bg-primary/10 dark:bg-primary/20 text-primary dark:text-indigo-300 text-sm font-medium px-2 py-1 rounded">
+              Tailwind CSS
+              <button class="text-primary/60 dark:text-indigo-300/70 hover:text-primary dark:hover:text-indigo-300">
+<span class="material-icons-outlined" style="font-size: 16px;">close</span>
+</button>
+</span>
+<input class="flex-grow bg-transparent border-0 focus:ring-0 p-1 min-w-[100px] text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" id="skills" name="skills" placeholder="Add a skill..." type="text"/>
+</div>
+<p class="mt-2 text-xs text-gray-500 dark:text-gray-400">Press Enter to add a new skill.</p>
+</div>
+<div class="space-y-4">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300">Social Links</label>
+<div class="relative">
+<span class="material-icons-outlined pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">link</span>
+<input class="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm pl-10 text-gray-900 dark:text-white" name="github" placeholder="GitHub Profile URL" type="url" value="https://github.com/alexdoe"/>
+</div>
+<div class="relative">
+<span class="material-icons-outlined pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">link</span>
+<input class="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm pl-10 text-gray-900 dark:text-white" name="linkedin" placeholder="LinkedIn Profile URL" type="url" value="https://linkedin.com/in/alexdoe"/>
+</div>
+<div class="relative">
+<span class="material-icons-outlined pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">public</span>
+<input class="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm pl-10 text-gray-900 dark:text-white" name="website" placeholder="Personal Website URL" type="url"/>
+</div>
+</div>
+<div class="relative">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1" for="username">Username</label>
+<input class="block w-full rounded-md border-green-500 dark:border-green-500 bg-gray-50 dark:bg-gray-700 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm text-gray-900 dark:text-white pr-10" id="username" name="username" placeholder="e.g., alexdoe" type="text" value="alexdoe"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 top-7 flex items-center pr-3">
+<span class="material-icons-outlined text-green-500">check_circle</span>
+</div>
+<p class="mt-2 text-sm text-green-600 dark:text-green-500">Username is available!</p>
+</div>
+<div class="flex flex-col sm:flex-row sm:justify-end sm:items-center gap-3 pt-4 border-t border-gray-200 dark:border-gray-700">
+<button class="w-full sm:w-auto justify-center rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800" type="button">
+            Cancel
+          </button>
+<button class="w-full sm:w-auto justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800" type="submit">
+            Save Changes
+          </button>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>
