@@ -10,4 +10,6 @@
 </template>
 <script setup>
 import NavBar from '@/components/SideNavBar.vue'
-import FeedLayout from '@/layouts/FeedLayout.vue'</script>
+import FeedLayout from '@/layouts/FeedLayout.vue'
+
+</script>

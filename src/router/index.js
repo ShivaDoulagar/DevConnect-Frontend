@@ -7,6 +7,10 @@ import LandingPage from '@/views/LandingPage.vue'
 import SignUp from '@/views/SignUp.vue' // Renamed from SiginUp.vue
 import DashBoard from '@/views/DashBoard.vue'
 import FeedLayout from '@/layouts/FeedLayout.vue'
+import UserProfile from '@/views/UserProfile.vue'
+import CreatePost from '@/views/CreatePost.vue'
+import UserNotifications from '@/views/UserNotifications.vue'
+import UserSettings from '@/views/UserSettings.vue'
 
 const routes = [
   {
@@ -37,6 +41,30 @@ const routes = [
     path: '/feed',
     name: 'Feed',
     component: FeedLayout,
+    meta: { requiresAuth: true }, // Protected
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: UserProfile,
+    meta: { requiresAuth: true }, // Protected
+  },
+  {
+    path: '/create-post',
+    name: 'create-post',
+    component: CreatePost,
+    meta: { requiresAuth: true }, // Protected
+  },
+  {
+    path: '/notifications',
+    name: 'notifications',
+    component: UserNotifications,
+    meta: { requiresAuth: true }, // Protected
+  },
+  {
+    path: '/settings',
+    name: 'user settings',
+    component: UserSettings,
     meta: { requiresAuth: true }, // Protected
   },
 ]

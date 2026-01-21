@@ -10,8 +10,8 @@
 
     <!-- Navigation Links -->
     <nav class="flex-1 p-4 space-y-2">
-      <router-link to="/dashboard"
-        class="flex items-center gap-3 px-4 py-2 rounded-lg bg-blue-700/10 text-blue-700 font-semibold"
+      <router-link to="/home"
+        class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
         active-class="bg-blue-700/10 text-blue-700">
         <span class="material-icons-outlined">dashboard</span>
         Dashboard
@@ -58,11 +58,13 @@
       <div class="flex items-center gap-3">
         <img :src="userAvatar" alt="User avatar" class="w-10 h-10 rounded-full object-cover" />
         <div class="flex-1">
-          <p class="font-semibold text-gray-800 dark:text-gray-100">
-            {{ userName || 'User' }}
-          </p>
+          <router-link to="/profile">
+            <p class="font-semibold text-gray-800 dark:text-gray-100">
+              {{ userName || 'User' }}
+            </p>
+          </router-link>
           <button v-if="authStore.isAuthenticated && authStore.isTokenValid" @click="handleLogout"
-            class="text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400">
+            class="text-sm text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 cursor-pointer">
             Logout
           </button>
           <router-link v-else to="/signin" class="text-sm text-blue-700 hover:underline">

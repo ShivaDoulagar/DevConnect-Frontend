@@ -1,10 +1,10 @@
 <template>
-  <main class="flex-1 p-8 overflow-y-auto bg-gray-50 dark:bg-gray-900 h-full">
+  <main class="flex-1 md:p-8 p-3 overflow-y-auto bg-gray-50 dark:bg-gray-900 h-full">
     <div class="max-w-7xl mx-auto">
       <!-- Header -->
       <header class="mb-8">
         <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100">
-          Welcome back, {{ userName || 'Alex' }}!
+          Welcome back, {{ userName || 'Shiva' }}!
         </h2>
         <p class="text-gray-600 dark:text-gray-400 mt-1">
           Here's a summary of your activity on DevConnect.

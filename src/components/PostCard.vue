@@ -1,5 +1,6 @@
+<script setup></script>
 <template>
-  <div class="card w-full bg-white rounded-xl shadow-2xl p-3">
+  <div class="card w-full rounded-xl shadow-2xl p-3 dark:bg-gray-900 bg-white">
     <div class="heading flex space-x-2">
       <div class="image h-12 flex items-center justify-center rounded-full m-3">
         <span class="material-icons-outlined">person</span>
@@ -11,7 +12,7 @@
     </div>
     <div class="content flex-col flex items-start justify-center p-4">
       <h3 class="text-2xl">title</h3>
-      <p class="text-md text-gray-800">
+      <p class="text-md text-gray-800 dark:text-gray-400">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum omnis harum dolore ratione,
         tempora itaque nihil cum at iste error debitis sapiente repellendus soluta temporibus
         tenetur nobis consequatur! Accusantium, aut?
@@ -22,23 +23,23 @@
         #tag1
       </div>
       <div class="image">
-        <img src="../assets/images/wallpaper.jpg" alt="postimage" class="rounded-xl mt-2 w-full h-auto" />
+        <img src="../assets/images/wallpaper.jpg" alt="postimage" class="rounded-xl mt-2" />
       </div>
 
       <!-- footer here  for card -->
-      <div class="footer flex justify-between items-center mt-2 px-4">
+      <div class="footer flex justify-between items-center mt-2 px-4 text-gray-600 dark:text-gray-400">
         <div class="left mx-3 flex space-x-4">
-          <button class="flex justify-center items-center space-x-1 text-center text-gray-600">
-            <span class="material-icons-outlined text-gray-600">thumb_up</span>
+          <button class="flex justify-center items-center space-x-1 text-center cursor-pointer">
+            <span class="material-icons-outlined">thumb_up</span>
             <p>10 Likes</p>
           </button>
-          <button class="flex justify-center items-center text-center text-gray-600">
-            <span class="material-icons-outlined text-gray-600 flex items-center justify-center">comments</span>
+          <button class="flex justify-center items-center text-center cursor-pointer">
+            <span class="material-icons-outlined flex items-center justify-center">comments</span>
             <p>10 comments</p>
           </button>
         </div>
-        <div class="right">
-          <span class="material-icons-outlined text-gray-600 md:mr-5">share</span>
+        <div class="right cursor-pointer">
+          <span class="material-icons-outlined md:mr-5">share</span>
         </div>
       </div>
     </div>

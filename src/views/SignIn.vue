@@ -77,7 +77,7 @@ const login = async () => {
     console.log(response.data);
     authStore.login(response.data.token);
     alert.showAlert("Login successful!", 'success', 3000);
-    router.push('/home');
+    router.push('/feed');
 
 
   } catch (error) {

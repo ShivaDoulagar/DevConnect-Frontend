@@ -1,5 +1,5 @@
 <template>
-  <div class="card w-full bg-white rounded-xl shadow-2xl p-4">
+  <div class="card md:w-full w-[90vw] mx-auto   rounded-xl shadow-2xl p-4 bg-white dark:bg-gray-900 ">
     <div class="heading flex space-x-2">
       <div class="flex items-center justify-center rounded-full flex-col">
         <div class="flex space-x-2">
