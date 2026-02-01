@@ -92,9 +92,9 @@ const register = async () => {
   try {
     if (!checkPasswordMatch()) return;
     const response = await axios.post(backend_url + "/auth/register", {
-      name: name.value,
-      email: mail.value,
-      password: password.value,
+      name: name.value.trim(),
+      email: mail.value.trim(),
+      password: password.value.trim(),
     });
     alert.success(response.data.message)
   } catch (error) {

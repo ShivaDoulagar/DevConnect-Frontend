@@ -11,6 +11,7 @@ import UserProfile from '@/views/UserProfile.vue'
 import CreatePost from '@/views/CreatePost.vue'
 import UserNotifications from '@/views/UserNotifications.vue'
 import UserSettings from '@/views/UserSettings.vue'
+import EditProfile from '@/views/EditProfile.vue'
 
 const routes = [
   {
@@ -66,6 +67,12 @@ const routes = [
     name: 'user settings',
     component: UserSettings,
     meta: { requiresAuth: true }, // Protected
+  },
+  {
+    path: '/edit_profile',
+    name: 'editprofile', // Updated name
+    component: EditProfile,
+    meta: { requiresAuth: true }, // Public
   },
 ]
 

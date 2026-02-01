@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div class="suggestedDevelopers p-3 space-y-4 bg-white rounded-xl">
+  <div class="suggestedDevelopers p-3 space-y-4 bg-white rounded-xl dark:bg-gray-900 dark:text-white">
     <div class="heading">
       <h1 class="font-bold text-lg">Suggested Developers</h1>
     </div>
@@ -14,7 +14,7 @@
               alt="image" class="h-full w-full object-cover" />
           </div>
           <div class="flex flex-col">
-            <h3>John Doe</h3>
+            <h3 class="cursor-pointer">John Doe</h3>
             <p class="text-sm text-gray-600 dark:text-gray-200">Reactjs and Nodejs</p>
           </div>
         </div>

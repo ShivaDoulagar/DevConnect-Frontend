@@ -67,14 +67,12 @@ let backend_url = import.meta.env.VITE_API_BASE_URL;
 
 
 
-
 const login = async () => {
   try {
     const response = await axios.post(backend_url + "/auth/sign", {
       email: mail.value,
       password: password.value,
     });
-    console.log(response.data);
     authStore.login(response.data.token);
     alert.showAlert("Login successful!", 'success', 3000);
     router.push('/feed');

@@ -1,8 +1,13 @@
 <template>
   <nav>
-    <div class="w-full flex justify-between px-36 items-center">
-      <div class="left flex items-center justify-center md:block">
-        <h1 class="text-2xl font-bold py-4 ">DevConnect</h1>
+    <div class="w-full flex justify-between px-6 items-center md:px-36 ">
+      <div class="left flex flex-row items-center justify-center space-x-3  md:justify-start">
+        <div>
+          <div class="material-icons-outlined text-white h-full bg-blue-600 p-2 rounded-lg">code</div>
+        </div>
+        <div>
+          <h1 class="text-2xl font-bold py-4 ">DevConnect</h1>
+        </div>
       </div>
       <div class="right hidden md:flex items-center">
         <div class="login flex justify-between gap-3">

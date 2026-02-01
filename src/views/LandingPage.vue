@@ -6,20 +6,20 @@
     <div class="main w-full min-h-screen">
       <div
         class="content w-full flex text-center justify-center items-center flex-col gap-6 px-4 sm:px-8 md:px-12 lg:px-20 min-h-screen py-12">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
+        <h1 class=" text-3xl md:text-5xl lg:text-6xl font-bold">
           Connect. Build. Share. Grow
         </h1>
         <div class="md:w-[60vw] ">
-          <p class=" text-[calc(3.4rem-24px)]">
+          <p class=" text-lg md:text-[calc(3.4rem-24px)]">
             DevConnect is the premier social platform for developers to showcase projects, share knowledge, and
             collaborate on next big thing. Join a community of builders today.
           </p>
         </div>
         <div class="buttons flex flex-col sm:flex-row gap-4 sm:gap-6">
-          <button
-            class="bg-blue-700 rounded-lg shadow-md px-6 sm:px-9 py-2 sm:py-3 text-white hover:bg-blue-800 hover:underline text-lg sm:text-xl md:text-2xl">
+          <router-link to="/register" class="bg-blue-700 rounded-lg shadow-md px-6 sm:px-9 py-2 sm:py-3 text-white hover:bg-blue-800
+            hover:underline text-lg sm:text-xl md:text-2xl">
             Get started for free
-          </button>
+          </router-link>
           <button class="hover:underline text-lg sm:text-xl md:text-2xl">Learn More</button>
         </div>
       </div>

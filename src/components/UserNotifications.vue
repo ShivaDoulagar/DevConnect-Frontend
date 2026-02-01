@@ -1,5 +1,5 @@
 <template>
-  <main class="flex-1 overflow-y-auto bg-gray-50">
+  <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 dark:text-white h-full overflow-auto">
     <div class="max-w-4xl mx-auto py-10 px-8">
       <div class="flex items-center justify-between mb-8">
         <div>
@@ -43,9 +43,9 @@
           </div>
         </div>
         <div
-          class="group bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4 transition-all hover:shadow-sm">
+          class="group bg-white border border-gray-100 rounded-xl p-4 flex items-start gap-4 transition-all hover:shadow-sm dark:bg-gray-900">
           <div
-            class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600">
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 ">
             <span class="material-icons-outlined text-[20px]">person_add</span>
           </div>
           <div class="flex-1 min-w-0">
@@ -75,7 +75,8 @@
           </div>
           <div class="flex-1 min-w-0">
             <p class="text-[15px] leading-relaxed">
-              Your post <span class="text-primary font-medium">"Modern CSS Layouts"</span> reached 100 stars!
+              Your post <span class=" material-symbols-outlined text-primary font-medium">"Modern CSS Layouts"</span>
+              reached 100 stars!
             </p>
             <p class="text-xs text-gray-500 mt-1">Yesterday at 4:20 PM</p>
           </div>

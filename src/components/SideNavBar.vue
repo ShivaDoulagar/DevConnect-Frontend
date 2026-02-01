@@ -45,7 +45,7 @@
         Notifications
       </router-link>
 
-      <router-link to="/settings"
+      <router-link to="/edit_profile"
         class="flex items-center gap-3 px-4 py-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"
         active-class="bg-blue-700/10 text-blue-700">
         <span class="material-icons-outlined">settings</span>
