@@ -1,4 +1,7 @@
 <template>
+  <nav>
+    <MobileNav class="md:hidden" />
+  </nav>
   <main class="flex-1 py-6 overflow-y-auto bg-white dark:bg-gray-900 dark:text-white h-full flex flex-col space-y-10 ">
     <div class="header flex text-center w-full flex-col space-y-5">
       <h1 class="text-2xl   md:text-4xl font-bold mx-auto">Edit Your Profile </h1>
@@ -135,16 +138,18 @@
 </template>
 
 <script setup>
+
 import { ref, onMounted, computed } from 'vue';
 import { useAlertStore } from '@/stores/alerts.js';
 import api from '@/services/api'
 import defaut_avatar from '@/assets/images/default_user.png'
+import MobileNav from './MobileNav.vue';
 
 // Helper function to build image URL using api's baseURL
 const buildImageUrl = (imagePath) => {
   if (!imagePath) return null
   if (imagePath.startsWith('http')) return imagePath
-  
+
   // Get the base URL from the api axios instance
   const baseURL = api.defaults.baseURL || import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
   const cleanBaseURL = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL

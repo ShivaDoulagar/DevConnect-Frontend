@@ -1,9 +1,9 @@
 <template>
   <div class="main w-screen min-h-screen flex space-x-2 bg-gray dark:bg-gray-800">
-    <div class="sub-main w-15 bg-gray-500 flex-1 rounded hidden md:block">
+    <div class="sub-main w-15  flex-1 rounded hidden md:block">
       <NavBar />
     </div>
-    <div class="content flex-4 bg-gray-600 rounded">
+    <div class="content flex-4  rounded">
       <UserDashBoard />
     </div>
   </div>

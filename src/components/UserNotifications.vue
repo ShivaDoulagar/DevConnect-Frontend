@@ -1,4 +1,7 @@
 <template>
+  <nav>
+    <MobileNav class="md:hidden" />
+  </nav>
   <main class="flex-1 overflow-y-auto bg-gray-50 dark:bg-gray-900 dark:text-white h-full overflow-auto">
     <div class="max-w-4xl mx-auto py-10 px-8">
       <div class="flex items-center justify-between mb-8">
@@ -103,3 +106,10 @@
     </div>
   </main>
 </template>
+
+
+<script setup>
+import MobileNav from './MobileNav.vue';
+
+
+</script>

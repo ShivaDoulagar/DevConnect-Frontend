@@ -3,6 +3,7 @@
     <div class="sub-main w-15  flex-1 rounded md:block hidden shadow-lg">
       <NavBar />
     </div>
+
     <div class="content flex-4  rounded">
       <UserProfile />
     </div>

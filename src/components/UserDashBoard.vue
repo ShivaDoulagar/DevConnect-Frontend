@@ -1,5 +1,8 @@
 <template>
-  <main class="flex-1 md:p-8 p-3 overflow-y-auto bg-gray-50 dark:bg-gray-900 h-full">
+  <nav>
+    <MobileNav class="md:hidden" />
+  </nav>
+  <main class="flex-1 md:p-8 p-3 overflow-y-auto bg-gray-50 dark:bg-gray-900 h-full max-w-[94vw] mx-auto">
     <div class="max-w-7xl mx-auto">
       <!-- Header -->
       <header class="mb-8">
@@ -94,6 +97,8 @@
 import { ref, computed, onMounted } from 'vue'
 import { useAuthStore } from '@/stores/auth'
 import { jwtDecode } from 'jwt-decode'
+import MobileNav from './MobileNav.vue'
+
 
 const authStore = useAuthStore()
 

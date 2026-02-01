@@ -1,5 +1,9 @@
 <template>
-  <main class="flex-1 p-8 overflow-y-auto bg-gray-50 dark:bg-gray-900 dark:text-white h-full flex flex-col space-y-10 ">
+  <nav>
+    <MobileNav class="md:hidden" />
+  </nav>
+  <main
+    class="flex-1 p-8 overflow-y-auto bg-gray-50 dark:bg-gray-900 dark:text-white h-full flex flex-col space-y-10  z-10">
     <div
       class="up   flex justify-between space-x-3 rounded-xl overflow-hidden flex-col md:flex-row  h-auto md:p-8 bg-white dark:bg-gray-800 py-3  shadow-lg">
       <div class="left flex-1 flex justify-center align-top ">
@@ -128,12 +132,13 @@
 
 import { onMounted, ref, computed } from 'vue';
 import api from '@/services/api'
+import MobileNav from './MobileNav.vue';
 
 // Helper function to build image URL using api's baseURL
 const buildImageUrl = (imagePath) => {
   if (!imagePath) return null
   if (imagePath.startsWith('http')) return imagePath
-  
+
   // Get the base URL from the api axios instance
   const baseURL = api.defaults.baseURL || import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000'
   const cleanBaseURL = baseURL.endsWith('/') ? baseURL.slice(0, -1) : baseURL
